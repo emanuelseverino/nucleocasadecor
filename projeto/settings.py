@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-^1((t*f+5@zez8s7gffn*%u!rm3tms^^ivnm#4(%$9^zyteh@x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*',]
+ALLOWED_HOSTS = ['*', ]
 
 # Application definition
 
@@ -116,9 +116,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR / 'staticfiles')
-# STATICFILES_DIRS = [
-#     BASE_DIR / 'statics',
-# ]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR / 'media')
 
@@ -149,7 +147,6 @@ EMAIL_USE_SSL = ''
 EMAIL_TIMEOUT = ''
 EMAIL_SSL_KEYFILE = ''
 EMAIL_SSL_CERTFILE = ''
-
 
 CORS_ALLOWED_ORIGINS = [
     # "https://example.com" ,
