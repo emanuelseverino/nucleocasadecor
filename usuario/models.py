@@ -44,8 +44,8 @@ class Usuario(AbstractUser):
     tipo = models.CharField(max_length=20, choices=TIPO_CHOICES, default='EMPRESA')
     cnpj = models.CharField('CNPJ', max_length=20, unique=True, blank=True, null=True)
     cpf = models.CharField('CPF', max_length=20, unique=True, blank=True, null=True)
-    telefone = models.CharField('Telefone', unique=True, max_length=20)
-    celular = models.CharField('Celular', unique=True, max_length=20)
+    telefone = models.CharField('Telefone', max_length=20)
+    celular = models.CharField('Celular', max_length=20)
     endereco = models.CharField('Endereço', max_length=20)
     numero = models.CharField('Número', max_length=10)
     bairro = models.CharField('Bairro', max_length=30)
@@ -55,7 +55,7 @@ class Usuario(AbstractUser):
     is_staff = models.BooleanField('Membro da Equipe', default=False)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['nome', 'telefone',]
+    REQUIRED_FIELDS = ['nome', ]
 
     def __str__(self):
         return self.email

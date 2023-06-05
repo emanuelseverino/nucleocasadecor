@@ -5,7 +5,7 @@ from .models import Usuario
 class UsuarioCreationForm(UserCreationForm):
     class Meta:
         model = Usuario
-        fields = ('nome', 'telefone',)
+        fields = ('nome', )
         labels = {'username': 'e-mail'}
 
     def save(self, commit=True):
@@ -20,19 +20,18 @@ class UsuarioCreationForm(UserCreationForm):
 class UsuarioChangeForm(UserChangeForm):
     class Meta:
         model = Usuario
-        fields = ('nome', 'telefone',)
+        fields = ('nome', )
         labels = {'username': 'e-mail'}
 
 
 class UserAdminCreationForm(UserCreationForm):
     class Meta:
         model = Usuario
-        fields = ['nome', 'telefone', 'username', ]
+        fields = ['nome', 'username', ]
         labels = {'username': 'e-mail'}
 
     def save(self, commit=True):
         usuario = super().save(commit=False)
-        print(self.cleaned_data['username'])
         usuario.email = self.cleaned_data['username']
         if commit:
             usuario.save()
