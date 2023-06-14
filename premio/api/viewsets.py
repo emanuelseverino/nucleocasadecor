@@ -6,7 +6,7 @@ from premio.api.serializers import PremioSerializer
 from premio.models import Premio
 
 
-class PremioViewSet(GenericViewSet, ListAPIView):
+class PremioViewSet(ModelViewSet):
     queryset = Premio.objects.all()
     serializer_class = PremioSerializer
     permission_classes = [IsAuthenticated, ]
