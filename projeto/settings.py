@@ -152,4 +152,4 @@ CORS_ALLOW_METHODS = [
     "PUT",
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://*', 'http://*']
+CSRF_TRUSTED_ORIGINS = ['https://*', 'http://*', 'https://nucleocasadecor-production.up.railway.app', ]
