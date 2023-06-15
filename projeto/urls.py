@@ -5,7 +5,8 @@ from django.urls import path, include, re_path
 from rest_framework import routers
 from rest_framework.authtoken.views import obtain_auth_token
 
-from compra.api.viewsets import CompraViewSet
+from compra.api.viewsets import CompraViewSet, CriarCompraViewSet, ComprasEspecificadorViewSet
+from empresa.api.viewsets import EmpresasViewSet
 from premio.api.viewsets import PremioViewSet
 from usuario.api.viewsets import *
 from rest_framework import permissions
@@ -16,10 +17,13 @@ router = routers.DefaultRouter()
 router.register(r'usuario', UsuarioViewSet)
 router.register(r'cadastro/empresa', CriarEmpresaViewSet)
 router.register(r'empresa', EmpresaViewSet)
+router.register(r'empresas', EmpresasViewSet)
 router.register(r'cadastro/especificador', CriarEspecificadorViewSet)
 router.register(r'especificador', EspecificadorViewSet)
 router.register(r'premio', PremioViewSet)
 router.register(r'compra', CompraViewSet)
+router.register(r'compra/nova', CriarCompraViewSet)
+router.register(r'compras/especificador', ComprasEspecificadorViewSet)
 
 schema_view = get_schema_view(
     openapi.Info(
