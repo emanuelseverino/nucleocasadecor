@@ -6,9 +6,9 @@ from compra.models import Compra
 Usuario = get_user_model()
 
 
-class EmpresaSerializer(ModelSerializer):
+class EmpresaCompraSerializer(ModelSerializer):
     class Meta:
-        ref_name = "Empresa"
+        ref_name = "Empresa compra"
         model = Usuario
         fields = ['foto', 'first_name', 'last_name', 'email', 'tipo']
 
@@ -33,7 +33,7 @@ class CriarCompraSerializer(ModelSerializer):
 
 
 class ComprasEspeficadorSerializer(ModelSerializer):
-    empresa = EmpresaSerializer()
+    empresa = EmpresaCompraSerializer()
 
     class Meta:
         model = Compra

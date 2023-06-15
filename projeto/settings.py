@@ -31,7 +31,9 @@ INSTALLED_APPS = [
     'usuario.apps.UsuarioConfig',
     'premio.apps.PremioConfig',
     'compra.apps.CompraConfig',
+    'empresa',
     'django_rest_passwordreset',
+
 ]
 
 MIDDLEWARE = [
@@ -150,4 +152,4 @@ CORS_ALLOW_METHODS = [
     "PUT",
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://*', 'http://*' ]
+CSRF_TRUSTED_ORIGINS = ['https://*', 'http://*']

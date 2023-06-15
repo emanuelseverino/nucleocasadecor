@@ -48,6 +48,9 @@ class CriarEmpresaSerializer(ModelSerializer):
 
 class EmpresaSerializer(ModelSerializer):
     class Meta:
+        ref_name = "Empresa Serializer"
+
+    class Meta:
         model = Usuario
         fields = ['foto', 'email', 'nome', 'cnpj', 'tipo', 'seguimento', 'telefone', 'celular', 'endereco', 'numero',
                   'bairro', 'cidade', 'estado', ]
