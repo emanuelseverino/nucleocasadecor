@@ -10,7 +10,6 @@ Usuario = get_user_model()
 class EmpresasViewSet(ModelViewSet):
     queryset = Usuario.objects.all()
     serializer_class = EmpresasSerializer
-    permission_classes = [IsAuthenticated, ]
 
     def get_queryset(self):
         return self.queryset.filter(tipo='EMPRESA')
