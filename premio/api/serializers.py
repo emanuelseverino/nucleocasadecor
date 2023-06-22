@@ -6,6 +6,8 @@ from premio.models import Premio
 
 class PremioSerializer(ModelSerializer):
 
+    imagem_1 = Base64ImageField()
+
     class Meta:
         model = Premio
         fields = "__all__"
