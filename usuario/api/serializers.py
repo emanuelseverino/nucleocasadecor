@@ -31,7 +31,7 @@ Serialzierss que gerenciam as Empresas
 
 
 class CriarEmpresaSerializer(ModelSerializer):
-    foto = Base64ImageField()
+    foto = Base64ImageField(required=True)
     cnpj = serializers.CharField(required=True)
 
     class Meta:
