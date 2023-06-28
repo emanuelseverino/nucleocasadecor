@@ -32,13 +32,10 @@ Serialzierss que gerenciam as Empresas
 
 class CriarEmpresaSerializer(ModelSerializer):
     foto = Base64ImageField(required=True)
-    cnpj = serializers.CharField(required=True)
 
     class Meta:
         model = Usuario
-        fields = ['foto', 'email', 'password', 'nome', 'cnpj', 'seguimento', 'telefone', 'celular', 'endereco',
-                  'numero',
-                  'bairro', 'cidade', 'estado', ]
+        fields = ['foto', 'email', 'password', 'nome', 'cidade', ]
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
