@@ -51,7 +51,7 @@ class EmpresaSerializer(ModelSerializer):
 
     class Meta:
         model = Usuario
-        fields = ['foto', 'email', 'nome', 'cnpj', 'tipo', 'seguimento', 'telefone', 'celular', 'endereco', 'numero',
+        fields = ['id', 'foto', 'email', 'nome', 'cnpj', 'tipo', 'seguimento', 'telefone', 'celular', 'endereco', 'numero',
                   'bairro', 'cidade', 'estado', ]
 
 
@@ -80,5 +80,6 @@ class CriarEspecificadorSerializer(ModelSerializer):
 class EspecificadorSerializer(ModelSerializer):
     class Meta:
         model = Usuario
-        fields = ['foto', 'email', 'nome', 'cpf', 'tipo', 'seguimento', 'telefone', 'celular', 'endereco', 'numero',
+        fields = ['id', 'foto', 'email', 'nome', 'cpf', 'tipo', 'seguimento', 'telefone', 'celular', 'endereco',
+                  'numero',
                   'bairro', 'cidade', 'estado', ]
